@@ -43,5 +43,16 @@ Exemplo: A classe Carro define que todo os carros terão uma marca, cor, ano e p
       }
   }
 ```
+### Codigo:
+- this: o nome do objeto que chamou; referencia ao proprio objeto que chamou;
+- Se um atributo não receber valor ele inicia com 0;
+- Toda classe começac com letra maiuscula;
+- Todo atributo e médtodo começam com letra minuscula. O método se diferencia pq termina com ();
+- 
 
-
+### Visibilidade
+- Indica o nível de acesso aos componentes internos de uma classe;
+- +: público -> atributo que a classe atual e todas as outras classes podem ter acesso; 
+- -: privado -> atributo que somente a classe atual tem acesso;
+- #: protegido -> atributo que pode ser acessado pela classe atual e pelas suas sub-classes;
+- 
