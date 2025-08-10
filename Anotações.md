@@ -25,6 +25,17 @@ Exemplo: É como fabricar um carro real usando o projeto (classe).
       }
   }
 ```
+
+### Instância
+- É o objeto real criado a partir dessa classe;
+- Analogia: Se “classe” é a receita de bolo, “instanciar” é preparar um bolo real a partir dessa receita;
+- Instanciar um objeto é reservar um espaço para ele na memória, inicilizar atributos e usar ele através de uma referência como um nome tipo c1 de Caneta;
+
+Exemplo:
+- ```Caneta``` → é a classe.
+- ```new Caneta()``` → é o ato de instanciar (criar um objeto Caneta na memória).
+- ```c1``` → é a variável de referência que aponta para esse objeto.
+
 ### Classe 
 Define as características (atributos) de um objeto e as ações (métodos) que um objeto poderá
 realizar. 
@@ -43,16 +54,65 @@ Exemplo: A classe Carro define que todo os carros terão uma marca, cor, ano e p
       }
   }
 ```
+### Método
+Um método é um bloco de código dentro de uma classe que executa uma tarefa específica. Ele pode:
+- Executar ações (como imprimir algo na tela).
+- Receber dados (por meio de parâmetros).
+- Retornar um valor (ou não).
+
+É uma função que está dentro de uma classe. Toda função é um médodo. 
+
+Exemplo:
+```java
+public void dizerOla() {
+    System.out.println("Olá, mundo!");
+}
+
+```
+
 ### Codigo:
 - this: o nome do objeto que chamou; referencia ao proprio objeto que chamou;
 - Se um atributo não receber valor ele inicia com 0;
 - Toda classe começac com letra maiuscula;
 - Todo atributo e médtodo começam com letra minuscula. O método se diferencia pq termina com ();
-- 
+- O nome do arquivo deve ser igual ao nome da classe;
+- A função main é um método; 
 
 ### Visibilidade
 - Indica o nível de acesso aos componentes internos de uma classe;
 - +: público -> atributo que a classe atual e todas as outras classes podem ter acesso; 
 - -: privado -> atributo que somente a classe atual tem acesso;
 - #: protegido -> atributo que pode ser acessado pela classe atual e pelas suas sub-classes;
+- Posso usar protegido e public na main, mas não private;
+- Mesmo que o atributo seja privado, se o médtodo que usa ele dentro da mesma classe for público, então ele pode ser alterado através da chamada de outro arquivo;
+
+## Métodos Especiais
+- Você normalmente usa getters e setters quando quer controlar o acesso aos atributos de uma classe, em vez de deixar tudo público, mas ainda precisa ler e/ou alterar esses valores fora da própria classe.
+- Quando não usar: Se o atributo é interno e nenhum código externo precisa acessar diretamente → não precisa nem de getter nem de setter; se é um valor fixo;
+
+### Métodos Acessores (Getters)
+- É um médtodo que pega alguma informação;
+- É um médtodo que acessa um atributo mantendoa segurança de acesso a ele;
+- Pede algo ao método, não passa nada como parâmetro;
+- Usado quando: Você precisa ler o valor de um atributo fora da classe, mas não quer expor o atributo diretamente como public.
+- Se um atributo já é public, não há necessidade técnica de criar getters e setters, porque qualquer código pode acessá-lo e modificá-lo diretamente.
+
+### Métodos Modificadores (Setters)
+- Modificam os atributos garantindo a segurança do atributo;
+- Passa um parâmetro para o método geralmente;
+- Usado quando: Você precisa alterar o valor de um atributo fora da classe, mas quer controlar a forma como ele é alterado.
+
+### Construtores (Construct)
+- É chamado automaticamente quando você cria (instancia) um objeto.
+- Ele tem o mesmo nome da classe.
+- Não tem tipo de retorno (nem void).
+- Serve para configurar o estado inicial do objeto.
+- Usado para garantir que todo objeto criado já tenha um estado inicial válido.
+- Pode receber parametros;
 - 
+
+
+
+
+
+
