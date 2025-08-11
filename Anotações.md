@@ -1,4 +1,4 @@
-### Objeto
+## Objeto
 É uma instância de uma classe, ou seja, algo criado a partir da classe que é como um molde. 
 
 Exemplo: É como fabricar um carro real usando o projeto (classe).
@@ -26,7 +26,7 @@ Exemplo: É como fabricar um carro real usando o projeto (classe).
   }
 ```
 
-### Instância
+## Instância
 - É o objeto real criado a partir dessa classe;
 - Analogia: Se “classe” é a receita de bolo, “instanciar” é preparar um bolo real a partir dessa receita;
 - Instanciar um objeto é reservar um espaço para ele na memória, inicilizar atributos e usar ele através de uma referência como um nome tipo c1 de Caneta;
@@ -36,7 +36,7 @@ Exemplo:
 - ```new Caneta()``` → é o ato de instanciar (criar um objeto Caneta na memória).
 - ```c1``` → é a variável de referência que aponta para esse objeto.
 
-### Classe 
+## Classe 
 Define as características (atributos) de um objeto e as ações (métodos) que um objeto poderá
 realizar. 
 
@@ -54,7 +54,7 @@ Exemplo: A classe Carro define que todo os carros terão uma marca, cor, ano e p
       }
   }
 ```
-### Método
+## Método
 Um método é um bloco de código dentro de uma classe que executa uma tarefa específica. Ele pode:
 - Executar ações (como imprimir algo na tela).
 - Receber dados (por meio de parâmetros).
@@ -70,15 +70,22 @@ public void dizerOla() {
 
 ```
 
-### Codigo:
+## Codigo:
 - this: o nome do objeto que chamou; referencia ao proprio objeto que chamou;
 - Se um atributo não receber valor ele inicia com 0;
 - Toda classe começac com letra maiuscula;
 - Todo atributo e médtodo começam com letra minuscula. O método se diferencia pq termina com ();
 - O nome do arquivo deve ser igual ao nome da classe;
-- A função main é um método; 
+- A função main é um método;
+- Para usar floar bote com f no final do numero;
+- Literal decimal padrão é double. Ex: 2.0 sem o f, o Java considera como double; 
 
-### Visibilidade
+## Tipos de print
+- ```print()``` → imprime o texto sem pular para a próxima linha.
+- ```println()``` → imprime o texto e pula para a próxima linha automaticamente.
+- ```printf()``` → imprime com formatação, usando placeholders como %s (texto), %d (inteiro), %.2f (número decimal com 2 casas), e não pula linha automaticamente (você coloca \n se quiser).
+
+## Visibilidade
 - Indica o nível de acesso aos componentes internos de uma classe;
 - +: público -> atributo que a classe atual e todas as outras classes podem ter acesso; 
 - -: privado -> atributo que somente a classe atual tem acesso;
@@ -109,7 +116,7 @@ public void dizerOla() {
 - Serve para configurar o estado inicial do objeto.
 - Usado para garantir que todo objeto criado já tenha um estado inicial válido.
 - Pode receber parametros;
-- 
+
 
 
 
