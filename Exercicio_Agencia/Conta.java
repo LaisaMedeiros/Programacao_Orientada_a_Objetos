@@ -12,11 +12,13 @@ public class Conta {
     }
 
     //Pega numero da conta que é privado
+    //Acesso de leitura para um atributo privado
     public int getNum() {
         return num;
     }
   
     //Pega saldo da conta que é privado
+    //Acesso de leitura para um atributo privado
     public double getSaldo() {
         return saldo;
     }
@@ -28,6 +30,8 @@ public class Conta {
         }
     }
     
+    //Só saca se tiver saldo suficiente e valor for positivo.
+    //Retorna true se conseguiu sacar e false se não conseguiu.
     public boolean sacar(double valor) {
         if (valor > 0 && this.saldo >= valor) {
             this.saldo -= valor;
@@ -35,9 +39,11 @@ public class Conta {
         }
         return false;
     }
-
+    //É uma anotação do Java
+    //Diz ao compilador: "Ei, esse método substitui um método que já existe na superclasse".
     @Override
     public String toString() {
         return "Conta[num=" + num + ", saldo=" + saldo + "]";
     }
 }
+
