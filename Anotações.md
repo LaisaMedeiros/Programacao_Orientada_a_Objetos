@@ -78,7 +78,9 @@ public void dizerOla() {
 - O nome do arquivo deve ser igual ao nome da classe;
 - A função main é um método;
 - Para usar floar bote com f no final do numero;
-- Literal decimal padrão é double. Ex: 2.0 sem o f, o Java considera como double; 
+- Literal decimal padrão é double. Ex: 2.0 sem o f, o Java considera como double;
+- %.2f → mostra número com 2 casas decimais.
+- %% → imprime um símbolo de porcentagem no texto.
 
 ## Tipos de print
 - ```print()``` → imprime o texto sem pular para a próxima linha.
