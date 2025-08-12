@@ -18,6 +18,7 @@ public class Agencia {
 
     // Cada vez que um conta é criada é +1 em qtdaContas
     // Método que cria uma nova conta dentro da agência
+    //A conta é criada acessando o Construct da classe Conta
     public void criaConta(int num, double saldo) {
         // Cria um novo objeto Conta com número e saldo
         Conta c = new Conta(num, saldo);
