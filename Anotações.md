@@ -119,7 +119,8 @@ public void dizerOla() {
 - Usado para garantir que todo objeto criado já tenha um estado inicial válido.
 - Pode receber parametros;
 
-
+### Override
+- É uma anotação em Java que você coloca antes de um método para indicar que você está reescrevendo (sobrescrevendo) um método que já existe na superclasse (classe mãe, ancestral).
 
 
 
