@@ -155,6 +155,12 @@ public void dizerOla() {
 ### Override
 - É uma anotação em Java que você coloca antes de um método para indicar que você está reescrevendo (sobrescrevendo) um método que já existe na superclasse (classe mãe, ancestral).
 
+## Herança
+- Herança é quando uma classe "filha" reaproveita código da classe "pai";
+- No construtor da classe filha, precisa chamar o construtor da classe pai usando super(...).
+
+## Encapsulamento
+- Encapsulamento é controlar o acesso aos atributos e métodos.
 
 
 
