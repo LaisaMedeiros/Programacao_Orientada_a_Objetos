@@ -84,6 +84,15 @@ public void dizerOla() {
 
 ## Tipos de print
 - ```print()``` → imprime o texto sem pular para a próxima linha.
+  Ex: ``` System.out.print("Olá");
+      System.out.print(" Mundo"); 
+      // Saída: Olá Mundo   (tudo na mesma linha)
+
+  String nome = "Laísa";
+      System.out.print("Seu nome é: " + nome);
+      // Saída: Seu nome é: Laísa```
+
+
 - ```println()``` → imprime o texto e pula para a próxima linha automaticamente.
 - ```printf()``` → imprime com formatação, usando placeholders como %s (texto), %d (inteiro), %.2f (número decimal com 2 casas), e não pula linha automaticamente (você coloca \n se quiser).
 
