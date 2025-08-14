@@ -81,6 +81,7 @@ public void dizerOla() {
 - Literal decimal padrão é double. Ex: 2.0 sem o f, o Java considera como double;
 - %.2f → mostra número com 2 casas decimais.
 - %% → imprime um símbolo de porcentagem no texto.
+- new: é usado somente quando você quer criar um novo objeto (instanciar uma classe) e arrays. Não é usado para chamar métodos que já existe;
 
 ## Tipos de print
 - ```print()``` → imprime o texto sem pular para a próxima linha.
@@ -91,13 +92,33 @@ public void dizerOla() {
         // Saída: Olá Mundo   (tudo na mesma linha)
 
         String nome = "Laísa";
-      System.out.print("Seu nome é: " + nome);
-      // Saída: Seu nome é: Laísa
+      System.out.print("Meu nome é: " + nome);
+      // Saída: Meu nome é: Laísa
    ```
 
 
 - ```println()``` → imprime o texto e pula para a próxima linha automaticamente.
+  Ex:
+  ``` java
+   System.out.println("Olá");
+   System.out.println("Mundo");
+   // Saída:
+   // Olá
+   // Mundo
+
+  int idade = 20;
+   System.out.println("Idade: " + idade);
+   // Saída: Idade: 20
+  ```
 - ```printf()``` → imprime com formatação, usando placeholders como %s (texto), %d (inteiro), %.2f (número decimal com 2 casas), e não pula linha automaticamente (você coloca \n se quiser).
+  Ex:
+  ``` java
+   System.out.printf("Meu nome é %s e tenho %d anos", "Laísa", 20);
+   // Saída: Meu nome é Laísa e tenho 20 anos
+   double media = 9.4567;
+   System.out.printf("Média: %.2f", media);
+   // Saída: Média: 9.46  (duas casas decimais)
+  ```
 
 ## Visibilidade
 - Indica o nível de acesso aos componentes internos de uma classe;
