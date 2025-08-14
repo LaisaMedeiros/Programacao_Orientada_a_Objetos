@@ -84,7 +84,8 @@ public void dizerOla() {
 
 ## Tipos de print
 - ```print()``` → imprime o texto sem pular para a próxima linha.
-  Ex: ``` System.out.print("Olá");
+  Ex: ```java 
+  System.out.print("Olá");
       System.out.print(" Mundo"); 
       // Saída: Olá Mundo   (tudo na mesma linha)
 
