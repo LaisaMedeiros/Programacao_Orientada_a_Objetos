@@ -4,7 +4,7 @@ public class Veiculo {
 	private int ano;
 	private int tam_tanque;	
 
-	protected Veiculo(String modelo, int ano){
+	protected Veiculo(String modelo, int ano, String chassi, int tam_tanque){
 		this.chassi = chassi;
 		this.modelo = modelo;
 		this.ano = ano;
