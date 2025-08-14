@@ -5,7 +5,7 @@ public class Carro extends Veiculo{
 		// tem de chamar o construtor da classe mae na primeira linha
 		// a nao ser que ele não tenha parâmetros
 		
-		Veiculo carro = new super(chassi, modelo, ano, tam_tanque);
+		super(chassi, modelo, ano, tam_tanque);
 		System.out.println("Fabricar carro" + carro.imprimir_dados());
 
 	}	
