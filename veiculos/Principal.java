@@ -12,12 +12,11 @@ public class Principal {
 		
 		// formatacao para o chassi
 		int num = 5;
+		// formata num para caber dentro da string 
 		String numeroFormatado = String.format("ABC%05d", num);
 		System.out.print( numeroFormatado );
 		
-		double custo_carro = 1000.00;
-		double custo_moto = 800.50;
-		
+		//cria novo objeto scan1 da classe Scanner
 		Scanner scan1 = new Scanner(System.in);
         String s1 = "\n\n 1 Fabricar carro \n 2 Fabricar moto";
         String s2 = "\n 3 Contabilidade da fábrica \n 9 Sair \n Escolha uma opção: ";
