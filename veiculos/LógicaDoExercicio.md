@@ -1,4 +1,5 @@
 - Fabrica: guarda todos os veículos e saldos;
 - Veiculo: superclasse que tem as características comuns de Carro e Moto;
 - As classes Carro e Moto são filhas de Veiculo (herança), mas adicionam informações próprias (ex.: num_portas no carro, cilindradas na moto).
-- 
+- Carro herda de Veiculo, então ele já tem modelo, ano, tam_tanque, chassi e o método imprimir_dados().
+- Moto herda de Veiculo do mesmo jeito.
