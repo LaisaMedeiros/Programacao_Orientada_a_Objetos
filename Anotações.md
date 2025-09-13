@@ -123,7 +123,7 @@ public void dizerOla() {
 ## Visibilidade
 - Indica o nível de acesso aos componentes internos de uma classe;
 - +: público -> atributo que a classe atual e todas as outras classes podem ter acesso; 
-- -: privado -> atributo que somente a classe atual tem acesso;
+- -: privado -> atributo que somente a classe atual tem acesso. Só é possível acessar pelo getter e não diretamente. Para mudança é com setter; 
 - #: protegido -> atributo que pode ser acessado pela classe atual e pelas suas sub-classes;
 - Posso usar protegido e public na main, mas não private;
 - Mesmo que o atributo seja privado, se o médtodo que usa ele dentro da mesma classe for público, então ele pode ser alterado através da chamada de outro arquivo;
@@ -143,14 +143,25 @@ public void dizerOla() {
 - Modificam os atributos garantindo a segurança do atributo;
 - Passa um parâmetro para o método geralmente;
 - Usado quando: Você precisa alterar o valor de um atributo fora da classe, mas quer controlar a forma como ele é alterado.
+- Exemplo:
+  ```java
+  c1.setModelo("BIC"); 
+  c1.modelo = "BIC"; //acesso direto
+  ```java
 
 ### Construtores (Construct)
-- É chamado automaticamente quando você cria (instancia) um objeto.
+- É chamado automaticamente quando você cria um objeto.
 - Ele tem o mesmo nome da classe.
 - Não tem tipo de retorno (nem void).
 - Serve para configurar o estado inicial do objeto.
 - Usado para garantir que todo objeto criado já tenha um estado inicial válido.
 - Pode receber parametros;
+- Exemplo: é possivel definir o valor do atributo dentro construtor na classe:
+   ```java
+   public Caneta(){
+      this.cor = "Azul";
+   }
+   ```java
 
 ### Override
 - É uma anotação em Java que você coloca antes de um método para indicar que você está reescrevendo (sobrescrevendo) um método que já existe na superclasse (classe mãe, ancestral).
