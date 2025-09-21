@@ -71,7 +71,6 @@ public void dizerOla() {
 ```
 
 ## Codigo:
-- this: o nome do objeto que chamou; referencia ao proprio objeto que chamou;
 - Se um atributo não receber valor ele inicia com 0;
 - Toda classe começac com letra maiuscula;
 - Todo atributo e médtodo começam com letra minuscula. O método se diferencia pq termina com ();
@@ -83,6 +82,109 @@ public void dizerOla() {
 - %% → imprime um símbolo de porcentagem no texto.
 - new: é usado somente quando você quer criar um novo objeto (instanciar uma classe) e arrays. Não é usado para chamar métodos que já existe;
 
+## Uso do this
+- É uma referência ao objeto atual da classe.
+- Diferenciar atributos da classe de parâmetros do método.
+- Passar o objeto atual como argumento.
+- Chamar outro construtor dentro da mesma classe.
+Ex:
+```java
+class Pessoa {
+    String nome;
+    int idade;
+
+    // Construtor
+    Pessoa(String nome, int idade) {
+        this.nome = nome; // "this.nome" é o atributo, "nome" é o parâmetro
+        this.idade = idade;
+    }
+
+    void apresentar() {
+        System.out.println("Olá, eu sou " + this.nome + " e tenho " + this.idade + " anos.");
+    }
+}
+
+```
+## Super
+- é uma referência à classe pai (superclasse).
+- Pra que serve:
+   - Acessar métodos ou atributos da classe pai.
+   - Chamar o construtor da superclasse.
+Ex:
+```java
+// Classe pai (superclasse)
+class Animal {
+    public void fazerSom() {
+        System.out.println("O animal faz um som.");
+    }
+}
+
+// Classe filha (subclasse)
+class Cachorro extends Animal {
+    @Override
+    public void fazerSom() {
+        // Chamando o método da classe pai
+        super.fazerSom();
+        System.out.println("O cachorro late.");
+    }
+}
+
+// Classe de teste
+public class Main {
+    public static void main(String[] args) {
+        Cachorro meuCachorro = new Cachorro();
+        meuCachorro.fazerSom();
+    }
+}
+```
+- Se a classe filha não chama o construtor da classe pai, o java cria essa chmada internamente;
+- Chamar o construtor se torna obrugatóro quandoa classe pai tem um construtor sem argumentos ou não  tem construtor ou é necessario inicializar a classe pai com valores específicos que vem da classe filha; 
+Ex:
+```java
+class Animal {
+    String nome;
+
+    public Animal(String nome) { // Construtor com argumento
+        this.nome = nome;
+        System.out.println("Construtor de Animal chamado para: " + this.nome);
+    }
+}
+
+class Cachorro extends Animal {
+    public Cachorro(String nome) {
+        // A chamada a 'super(nome)' é obrigatória
+        // para passar o nome para o construtor da classe pai.
+        super(nome);
+        System.out.println("Construtor de Cachorro chamado!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Cachorro meuCachorro = new Cachorro("Rex");
+    }
+}
+```
+## Uso do final
+- É uma palavra-chave que pode ser usada em variáveis, métodos ou classes.
+- Pra que serve:
+   - Variável final: o valor não pode ser alterado.
+   - Método final: não pode ser sobrescrito por subclasses.
+   - Classe final: não pode ser herdada.
+Ex:
+```java
+final class ContaBancaria {
+    final double taxa = 0.1; // constante
+
+    final void mostrarTaxa() {
+        System.out.println("Taxa da conta: " + taxa);
+    }
+}
+
+// Erro: não pode herdar de uma classe final
+// class ContaCorrente extends ContaBancaria {}
+
+```
 ## Tipos de print
 - ```print()``` → imprime o texto sem pular para a próxima linha.
   Ex:
@@ -95,8 +197,6 @@ public void dizerOla() {
       System.out.print("Meu nome é: " + nome);
       // Saída: Meu nome é: Laísa
    ```
-
-
 - ```println()``` → imprime o texto e pula para a próxima linha automaticamente.
   Ex:
   ``` java
@@ -184,6 +284,9 @@ public void dizerOla() {
 - Uma interface é um contrato que uma classe escolhe "assinar". Ela define o que uma classe deve fazer (os métodos que deve ter), mas não define como fazer (a implementação desses métodos).
 - O encapsulamento esconde os detalhes internos de uma classe específica. A interface leva isso para outro nível: ela esconde os detalhes de todas as classes que implementam aquele comportamento.
 - O código que usa uma interface só se preocupa com o contrato ("o que pode ser feito"), não com a implementação específica ("como é feito"). Isso fortalece enormemente o encapsulamento, pois você pode trocar a implementação real sem que o código que a usa perceba qualquer diferença.
+
+  ## Extends
+  - É usada para estabelecer uma relação de herança entre classes, permitindo que uma classe (a subclasse) herde os atributos e métodos de outra classe (a superclasse)
 - Não tem atributos só métodos.
 
 
