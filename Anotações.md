@@ -171,9 +171,19 @@ public void dizerOla() {
 - No construtor da classe filha, precisa chamar o construtor da classe pai usando super(...).
 
 ## Encapsulamento
-- Encapsulamento é controlar o acesso aos atributos e métodos.
+- Encapsulamento é controlar o acesso aos atributos e métodos;
+- Significa esconder a implementação interna de um objeto e controlar o acesso aos seus dados;
+- O objetivo principal do encapsulamento é proteger os dados de um objeto contra acesso indevido e modificações inconsistentes. Em vez de deixar os dados (atributos) de uma classe publicamente acessíveis para qualquer parte do código modificar, nós:
+     - Tornamos os atributos private (ou protected).
+     - Fornecemos métodos public para controlar como esses atributos são acessados e modificados.
+     - Esses métodos são conhecidos como Getters e Setters.
+     - Getter (get): Um método público que permite ler o valor de um atributo privado.
+     - Setter (set): Um método público que permite alterar o valor de um atributo privado, geralmente incluindo regras de validação para garantir que o novo valor é válido.
 
-
-
+### Interface
+- Uma interface é um contrato que uma classe escolhe "assinar". Ela define o que uma classe deve fazer (os métodos que deve ter), mas não define como fazer (a implementação desses métodos).
+- O encapsulamento esconde os detalhes internos de uma classe específica. A interface leva isso para outro nível: ela esconde os detalhes de todas as classes que implementam aquele comportamento.
+- O código que usa uma interface só se preocupa com o contrato ("o que pode ser feito"), não com a implementação específica ("como é feito"). Isso fortalece enormemente o encapsulamento, pois você pode trocar a implementação real sem que o código que a usa perceba qualquer diferença.
+- Não tem atributos só métodos.
 
 
