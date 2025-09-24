@@ -1,15 +1,12 @@
 class Aluno extends Pessoa{
-  long matricula;
-
-  public void estudar(){
-    System.out.println("O aluno", super.nome, "está estudando");
-  }
+  int matricula;
 
   @Override
-  public apresentar(){
-    System.out.println("Olá, meu nome é", super.nome, "minha matricula é", this.matricula, " e tenho", super.idade, "anos.") 
+  void apresentar() {
+      System.out.println("Olá, sou o aluno " + nome + ", tenho " + idade + " anos e minha matrícula é " + matricula + ".");
   }
 
-
-
+  void estudar() {
+      System.out.println("O aluno " + nome + " está estudando.");
+  }
 }
