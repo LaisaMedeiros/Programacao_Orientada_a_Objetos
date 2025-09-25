@@ -1,3 +1,4 @@
+//Herda todas as informações da classe Animal
 class Cachorro extends Animal {
     private String nome;
 
