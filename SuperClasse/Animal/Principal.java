@@ -1,7 +1,8 @@
-public class Teste {
+public class Principal {
     public static void main(String[] args) {
         Cachorro c = new Cachorro();
-        c.mostrarNomes();
-        c.emitirSom();
+        c.setNome("Amora");
+        c.comer();
+        c.beber();
     }
 }
