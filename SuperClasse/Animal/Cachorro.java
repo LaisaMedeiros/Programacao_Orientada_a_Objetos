@@ -1,17 +1,19 @@
 class Cachorro extends Animal {
-    String nome = "Cachorro";
+    private String nome;
 
-    void som() {
-        System.out.println("O cachorro late");
+    public void comer(){
+       System.out.println("O cachorro comeu!"); 
     }
 
-    void mostrarNomes() {
-        System.out.println(nome);        // atributo da subclasse
-        System.out.println(super.nome);  // atributo da superclasse
+    public void beber(){
+        System.out.println("O cachorro bebeu!"); 
     }
 
-    void emitirSom() {
-        som();           // método da subclasse
-        super.som();     // método da superclasse
+    public void latir(){
+        System.out.println("O cachorro latiu!"); 
+    }
+
+    public void lamber(){
+        System.out.println("O cachorro lambeu!"); 
     }
 }
