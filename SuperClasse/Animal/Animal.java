@@ -1,8 +1,16 @@
 //classe pai
-class Animal {
-    String nome = "Animal";
+public class Animal {
+    public String nome;
 
-    void som() {
-        System.out.println("O animal faz um som");
+    public void comer() {
+        //String mensagem = String.format("%s comeu", nome);
+        //System.out.println(mensagem);
+        //System.out.printf("%s comeu", nome);
+        System.out.println(nome + " comeu!");
+    }
+
+    public void beber() {
+        System.out.println(nome + " bebeu!");
     }
 }
+
