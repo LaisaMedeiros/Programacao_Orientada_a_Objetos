@@ -1,6 +1,6 @@
 //classe pai
 public class Animal {
-    public String nome;
+    private String nome;
 
     public void comer() {
         //String mensagem = String.format("%s comeu", nome);
@@ -12,5 +12,14 @@ public class Animal {
     public void beber() {
         System.out.println(nome + " bebeu!");
     }
+
+    public getNome(){
+        return nome;
+    }
+
+    public setNome(String nome){
+        this.nome = nome;
+    }
 }
+
 
