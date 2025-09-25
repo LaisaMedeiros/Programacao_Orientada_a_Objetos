@@ -1,11 +1,16 @@
 //Herda todas as informações da classe Animal
-class Cachorro extends Animal {
-    
+public class Cachorro extends Animal {
+    private int ossosComidos; 
+	public Cachorro(String nome) {
+		super(nome);
+		this.ossosComidos = 10; 
+	}
+	
     public void latir(){
-        System.out.printf("%s latiu", super.nome); 
+        System.out.printf("%s latiu\n", getNome()); 
     }
 
     public void lamber(){
-        System.out.printf("%s lambeu", super.nome); 
+        System.out.printf("%s lambeu\n", getNome()); 
     }
 }
