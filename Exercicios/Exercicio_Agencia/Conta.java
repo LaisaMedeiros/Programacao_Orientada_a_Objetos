@@ -39,11 +39,5 @@ public class Conta {
         }
         return false;
     }
-    //É uma anotação do Java
-    //Diz ao compilador: "Ei, esse método substitui um método que já existe na superclasse".
-    @Override
-    public String toString() {
-        return "Conta[num=" + num + ", saldo=" + saldo + "]";
-    }
 }
 
