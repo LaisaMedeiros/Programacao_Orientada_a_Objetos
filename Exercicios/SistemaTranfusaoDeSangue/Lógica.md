@@ -1,0 +1,5 @@
+- Classe Pessoa é generica <T extends TipoSanguineo>: com nome e tipo sanguíneo (atributo de T) 
+- Superclasse abstrata TipoSanguíneo com um método a ser implementado nas classes filhas;
+- 3 Classes filhas cada um com o nome do tipo sanguíneo específico e com um método que retorna o tipo sanguíneo dela;
+- Classe genérica de controle onde T se limita a classe base TipoSanguineo com métodos genericos que acaitam o mesmo tipo sanguíneo;
+- Método transfusão de sangue: definido para aceitar uma pessoa doadora e uma pessoa receptora, ambas já tipadas pelo genérico T;

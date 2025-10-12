@@ -1,0 +1,6 @@
+- Cria classe generica chamada Contribuinte extends Ctegoria: nome, categoria, pontos. O T deve ser um objeto do tipo categoria ou subclasse dela. 
+- Cria uma superclasse abstrata chamada Categoria. Tem método getCategoria;
+- Cria subclasses cada uma para um tipo de contribuinte;
+- Cria uma classe generica < T extends Categoria> para fazer a comparação;
+- Cria um metodo que a partir de pessoas com o mesmo tipo de categoria recebido no parametro compara os que tem mais pontos: 
+- Não sei fazer a main;
