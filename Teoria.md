@@ -26,6 +26,16 @@ Exemplo: É como fabricar um carro real usando o projeto (classe).
   }
 ```
 
+## Principal
+- Ela é o ponto de entrada obrigatório para a execução de qualquer aplicação Java autônoma (standalone). Quando você executa um programa Java, a Máquina Virtual Java (JVM) procura especificamente por um método com essa assinatura para começar a rodar o código.
+- Aqui está o que cada parte significa:
+   - public: É um modificador de acesso. Garante que o método main possa ser acessado pela JVM (que está fora da sua classe) para iniciar a execução do programa.
+    - static: Indica que o método pertence à classe em si, e não a uma instância (objeto) da classe. Isso é crucial porque a JVM precisa chamar o método main para iniciar o programa antes que qualquer objeto da sua classe seja criado.
+   - void: É o tipo de retorno. Significa que o método main não retorna nenhum valor para quem o chamou (a JVM, neste caso). O trabalho dele é iniciar a execução do programa, e não produzir um resultado que precise ser devolvido.
+   - main: É o nome do método. Este nome é um identificador universalmente reconhecido que a JVM é programada para procurar como o ponto de partida.
+   - (String[] args): É o parâmetro do método. É um array de strings que permite que o programa receba argumentos da linha de comando. Isso significa que você pode passar informações externas para o seu programa no momento em que ele é executado.
+
+
 ## Instância
 - É o objeto real criado a partir dessa classe;
 - Analogia: Se “classe” é a receita de bolo, “instanciar” é preparar um bolo real a partir dessa receita;
