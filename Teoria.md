@@ -299,4 +299,35 @@ final class ContaBancaria {
   - É usada para estabelecer uma relação de herança entre classes, permitindo que uma classe (a subclasse) herde os atributos e métodos de outra classe (a superclasse)
 - Não tem atributos só métodos.
 
+## Exceções:
+- Quando se cria programas de computador em Java, há possibilidade de ocorrer erros imprevistos durante sua execução, esses erros são conhecidos como exceções e podem ser provenientes de erros de lógica ou acesso a dispositivos ou arquivos externos.
+- Alguns possíveis motivos externos para ocorrer uma exceção são:
+   - Tentar abrir um arquivo que não existe.
+   - Tentar fazer consulta a um banco de dados que não está disponível.
+   - Tentar escrever algo em um arquivo sobre o qual não se tem permissão de escrita.
+   - Tentar conectar em servidor inexistente.
+- Alguns possíveis erros de lógica para ocorrer uma exceção são:
+   - Tentar manipular um objeto que está com o valor nulo.
+   - Dividir um número por zero.
+   - Tentar manipular um tipo de dado como se fosse outro.
+   - Tentar utilizar um método ou classe não existentes
 
+  ### Tratamento de exceções:
+  ```java
+  try
+   {
+     //Neste bloco são introduzidas todas as linhas de código que podem vir a lançar uma exceção.
+   }
+   catch(tipo_exceçao_1 e)
+   {
+     //Neste bloco é descrita a ação que ocorrerá quando a exceção for capturada.
+   }
+   catch(tipo_exceçao_2 e)
+   {
+     //ação a ser tomada
+   }
+   catch(tipo_exceçao_n e)
+   {
+     //ação a ser tomada
+   }
+  ```
