@@ -347,8 +347,13 @@ final class ContaBancaria {
      - ArithmeticException;
      - IllegalArgumentException;
 - Checked Exceptions: não é RuntimeExcpetion ou Error. Indicam situações excepcionais externas que um aplicativo pode prever e se recuperar, como problemas de I/O (Entrada/Saída), problemas de rede ou acesso a arquivos. É obrigatório tratar. Isso significa que um método que possa lançar uma Checked Exception deve, ou capturá-la (try-catch), ou declará-la na sua assinatura (throws).
-   - IOException;
+   - IOException: Sinaliza que ocorreu algum tipo de exceção de I/O (leitura/escrita de arquivo, comunicação de rede).
    - FileNotFoundException;
    - SQLException;
    - ClassNotFoundException.
 - Qual a diferença entre RuntmeException e as outras sublasses?
+- throws: usada na assinatura de um método para declarar se ele pode lançar uma ou mais exceções. É obrigatório em checked excpetions. Serve como um aviso para quem chama o método, informando que ele deve tratar a exceção usando um bloco try-catch ou, de forma análoga, propagar a exceção para outro método.
+   - Como usar? throws é colocado após a lista de parâmetros do método, seguida pelos tipos de exceção que ele pode lançar.
+   - Como funciona? Se um método não traat a exceção com try-catch, deve declarar com throws a responsabilidade passa para o método que o chamou;
+   - Exceções verificadas (como IOException, FileNotFoundException) devem ser declaradas com throws ou tratadas com try-catch. O compilador força essa verificação.
+  throw: Usado dentro de um método para lançar explicitamente uma instância de exceção
