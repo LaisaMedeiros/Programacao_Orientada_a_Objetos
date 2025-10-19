@@ -380,3 +380,7 @@ final class ContaBancaria {
 | Sintaxe | É seguido por uma instância de Throwable.<br>`throw new NomeDaExcecao("Mensagem");` | É seguido pelo nome da classe da exceção.<br>`public void metodo() throws NomeDaExcecao { ... }` |
 | Propósito | Criar e lançar um evento de exceção em um ponto específico. | Satisfazer o compilador para exceções Checked ou documentar a API do método. |
 | Exemplo | `if (idade < 0) { throw new IllegalArgumentException(); }` | `public void lerArquivo() throws IOException { ... }` |
+
+#### Importante sobre throw e throws:
+- Se usar throws na assinatura do método n usa try-ctah dentro dele pq a exceção vai ser propagada para quem o chamou;
+- 
