@@ -331,3 +331,24 @@ final class ContaBancaria {
      //ação a ser tomada
    }
   ```
+
+### Hierarquia em Exceções
+- Throwable: classe base da hierarquia java.lang.Throwable. Possui duas sublasses diretas: Erro e Exceções;
+- Erro: Indica problemas sérios e anormais que geralmente não devem ser tratados pela aplicação. Eles são, na maioria das vezes, irrecuperáveis e resultam de falhas no sistema Java Virtual Machine (JVM) ou problemas de ambiente. java.lang.Error. Exemplos:
+   - StackOverflowError: Ocorre quando o stack de chamadas de métodos está cheio, geralmente por uma recursão infinita.
+   - OutOfMemoryError: Indica que a JVM esgotou a memória do heap e não pode alocar mais objetos.
+   - VirtualMachineError: Indica que a JVM está quebrada ou esgotou os recursos necessários para continuar.
+- Exceções: Indica condições excepcionais que o programa pode querer e deve capturar e tratar para permitir que o processamento continue. java.lang.Exception. As exceções são divididas em dois tipos principais:
+   - Exceções Verificadas (Checked Exceptions);
+   - Exceções Não Verificadas (Unchecked Exceptions).
+- Unchecked Exceptions: Indicam erros que geralmente são resultado de falhas de lógica de programação ou uso indevido de uma API, e não de falhas externas ou de ambiente. Não é obrigatório tratar ou declarar com throws. Exemplo:
+     - NullPointerException;
+     - ArrayIndexOutBoubdsException;
+     - ArithmeticException;
+     - IllegalArgumentException;
+- Checked Exceptions: não é RuntimeExcpetion ou Error. Indicam situações excepcionais externas que um aplicativo pode prever e se recuperar, como problemas de I/O (Entrada/Saída), problemas de rede ou acesso a arquivos. É obrigatório tratar. Isso significa que um método que possa lançar uma Checked Exception deve, ou capturá-la (try-catch), ou declará-la na sua assinatura (throws).
+   - IOException;
+   - FileNotFoundException;
+   - SQLException;
+   - ClassNotFoundException.
+- Qual a diferença entre RuntmeException e as outras sublasses?
