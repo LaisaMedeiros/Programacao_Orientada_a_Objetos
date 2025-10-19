@@ -341,19 +341,42 @@ final class ContaBancaria {
 - Exceções: Indica condições excepcionais que o programa pode querer e deve capturar e tratar para permitir que o processamento continue. java.lang.Exception. As exceções são divididas em dois tipos principais:
    - Exceções Verificadas (Checked Exceptions);
    - Exceções Não Verificadas (Unchecked Exceptions).
-- Unchecked Exceptions: Indicam erros que geralmente são resultado de falhas de lógica de programação ou uso indevido de uma API, e não de falhas externas ou de ambiente. Não é obrigatório tratar ou declarar com throws. Exemplo:
+- Unchecked Exceptions: Indicam erros que geralmente são resultado de falhas de lógica de programação ou uso indevido de uma API, e não de falhas externas ou de ambiente. Não precisam ser declaradas na assinatura do método com throws. Exemplo:
      - NullPointerException;
      - ArrayIndexOutBoubdsException;
      - ArithmeticException;
      - IllegalArgumentException;
-- Checked Exceptions: não é RuntimeExcpetion ou Error. Indicam situações excepcionais externas que um aplicativo pode prever e se recuperar, como problemas de I/O (Entrada/Saída), problemas de rede ou acesso a arquivos. É obrigatório tratar. Isso significa que um método que possa lançar uma Checked Exception deve, ou capturá-la (try-catch), ou declará-la na sua assinatura (throws).
+- Checked Exceptions: não é RuntimeExcpetion ou Error. Indicam situações excepcionais externas que um aplicativo pode prever e se recuperar, como problemas de I/O (Entrada/Saída), problemas de rede ou acesso a arquivos. É obrigatório tratar. Isso significa que um método que possa lançar uma Checked Exception deve, ou capturá-la (try-catch), ou declará-la assinatura do método com throws.
    - IOException: Sinaliza que ocorreu algum tipo de exceção de I/O (leitura/escrita de arquivo, comunicação de rede).
    - FileNotFoundException;
    - SQLException;
    - ClassNotFoundException.
-- Qual a diferença entre RuntmeException e as outras sublasses?
-- throws: usada na assinatura de um método para declarar se ele pode lançar uma ou mais exceções. É obrigatório em checked excpetions. Serve como um aviso para quem chama o método, informando que ele deve tratar a exceção usando um bloco try-catch ou, de forma análoga, propagar a exceção para outro método.
+#### Qual a diferença entre RuntmeException e as outras sublasses?
+#### Throws
+- Usada na assinatura de um método para declarar se ele pode lançar uma ou mais exceções. É obrigatório em checked excpetions. Serve como um aviso para quem chama o método, informando que ele deve tratar a exceção usando um bloco try-catch ou, de forma análoga, propagar a exceção para outro método.
    - Como usar? throws é colocado após a lista de parâmetros do método, seguida pelos tipos de exceção que ele pode lançar.
    - Como funciona? Se um método não traat a exceção com try-catch, deve declarar com throws a responsabilidade passa para o método que o chamou;
    - Exceções verificadas (como IOException, FileNotFoundException) devem ser declaradas com throws ou tratadas com try-catch. O compilador força essa verificação.
-  throw: Usado dentro de um método para lançar explicitamente uma instância de exceção
+#### Throw
+- Usado dentro de um método para lançar explicitamente uma instância de ;
+- O fluxo normal de execução do programa é interrompido e vai para o bloco try-catch mais próximo;
+- O objeto lançado deve ser instância da classe Throwable ou uma de suas subclasses (Exception ou Runtime);
+- Tabela sobre a superclasse de uma exceção personalizada:
+
+| Se sua exceção estende... | Ela é classificada como... | Obrigatório Tratar (pelo compilador)? | Situações Comuns |
+|---------------------------|----------------------------|--------------------------------------|-----------------|
+| Exception | Checked (Verificada) | SIM. Quem chama o método deve usar try-catch ou declarar throws. | Problemas externos e recuperáveis: IOException, SQLException, etc. |
+| RuntimeException | Unchecked (Não Verificada) | NÃO. O compilador não te obriga a tratar. | Erros de programação/lógica: NullPointerException, ArithmeticException, IllegalArgumentException, etc. |
+
+- Use extends Exception (Checked): Se a falha é um problema externo ou uma condição de negócio recuperável (ex: Arquivo não encontrado, falha de conexão). Você quer forçar o programador a tratar a situação.
+- Use extends RuntimeException (Unchecked): Se a falha é um erro de programação ou falha de lógica (ex: Argumento nulo/inválido, índice fora do limite). A intenção é que esses erros não sejam tratados, mas sim corrigidos no código-fonte.
+
+#### Throw vs Throws
+
+| Característica | throw | throws |
+|----------------|-------|--------|
+| O que faz? | Executa o lançamento de um objeto de exceção (pausa o fluxo do programa). | Declara/Informa que um método pode lançar uma ou mais exceções (faz parte da assinatura do método). |
+| Uso em Código | Usado dentro do corpo de um método (como uma instrução). | Usado na assinatura do método (antes da chave {). |
+| Sintaxe | É seguido por uma instância de Throwable.<br>`throw new NomeDaExcecao("Mensagem");` | É seguido pelo nome da classe da exceção.<br>`public void metodo() throws NomeDaExcecao { ... }` |
+| Propósito | Criar e lançar um evento de exceção em um ponto específico. | Satisfazer o compilador para exceções Checked ou documentar a API do método. |
+| Exemplo | `if (idade < 0) { throw new IllegalArgumentException(); }` | `public void lerArquivo() throws IOException { ... }` |
