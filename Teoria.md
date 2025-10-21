@@ -345,7 +345,7 @@ final class ContaBancaria {
      - NullPointerException;
      - ArrayIndexOutBoubdsException;
      - ArithmeticException;
-     - IllegalArgumentException;
+     - IllegalArgumentException: vaalores fora da faixa permitida, valores nulos (null) quando não permitido, strings vazias ou em branco e valores que viola regras de negócio;
 - Checked Exceptions: não é RuntimeExcpetion ou Error. Indicam situações excepcionais externas que um aplicativo pode prever e se recuperar, como problemas de I/O (Entrada/Saída), problemas de rede ou acesso a arquivos. É obrigatório tratar. Isso significa que um método que possa lançar uma Checked Exception deve, ou capturá-la (try-catch), ou declará-la assinatura do método com throws.
    - IOException: Sinaliza que ocorreu algum tipo de exceção de I/O (leitura/escrita de arquivo, comunicação de rede).
    - FileNotFoundException;
