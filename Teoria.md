@@ -394,7 +394,14 @@ final class ContaBancaria {
 - 
 
 ### Componentes
-- JLabel: exibição de um texto simples ou imagem com texto. Pode ser usado para exibir os resultados de um processo;
+- JFrame: cria uma nova janela. Métodos:
+   - setSize:
+   - setDefaultCloseOperation:
+   - setVisible:
+- JPainel: 
+   - setLayout:
+- JLabel: exibição de um texto simples ou imagem com texto. Pode ser usado para exibir os resultados de um processo. Seus métodos são:
+   - 
 - JtextFields: possibilita a inserção de uma linha de texto;
 - JPasswordFields permite inserir um valo;
 - 
