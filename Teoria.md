@@ -384,3 +384,11 @@ final class ContaBancaria {
 #### Importante sobre throw e throws:
 - Se usar throws na assinatura do método n usa try-ctah dentro dele pq a exceção vai ser propagada para quem o chamou;
 - 
+
+## Interfaces Gráficas
+- A interface gráfica é constituída de componentes;
+- Cada componente é um objeto;
+
+### Biblioetca Swing
+- Possibilita o desenvolvimento de interfaces elaboradas para um ambiente de computação com interação mais agradável;
+- 
