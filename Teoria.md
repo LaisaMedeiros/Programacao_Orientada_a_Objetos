@@ -392,3 +392,9 @@ final class ContaBancaria {
 ### Biblioetca Swing
 - Possibilita o desenvolvimento de interfaces elaboradas para um ambiente de computação com interação mais agradável;
 - 
+
+### Componentes
+- JLabel: exibição de um texto simples ou imagem com texto. Pode ser usado para exibir os resultados de um processo;
+- JtextFields: possibilita a inserção de uma linha de texto;
+- JPasswordFields permite inserir um valo;
+- 
