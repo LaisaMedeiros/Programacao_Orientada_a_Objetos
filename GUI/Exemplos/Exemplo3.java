@@ -2,7 +2,8 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class GridLayoutExemplo {
+//Janela com GridLayout usando Swing
+public class Exemplo3 {
     public static void main(String[] args) {
 		
         JFrame janela = new JFrame("Exemplo GridLayout");

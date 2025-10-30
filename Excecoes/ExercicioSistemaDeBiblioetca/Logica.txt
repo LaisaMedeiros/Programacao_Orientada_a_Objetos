@@ -1,0 +1,69 @@
+Bem vindo ao SGL (Sistema de Gerenciamento de Livros)
+
+1. Mostra as opções de 1 a 6:
+   - 1. Empréstimo de Livro
+   - 2. Devolução de Livro  
+   - 3. Transferência de Livro
+   - 4. Consulta de Status do Livro
+   - 5. Ver Histórico de Erros
+   - 6. Sair
+
+2. Tratamento de entrada da opção principal:
+   - Se digitar texto → lança exceção InputMismatchException
+   - Se número decimal → lança exceção InputMismatchException  
+   - Se número < 1 ou > 6 → lança exceção IllegalArgumentException
+   - Se número válido → continua
+
+3. Para opções 1-4, pede escolha de busca:
+   "Digite 1 para inserir o código e 2 para inserir o título do livro:"
+   - Se digitar texto → InputMismatchException
+   - Se número decimal → InputMismatchException
+   - Se número ≠ 1 ou 2 → IllegalArgumentException
+   - Se 1 ou 2 → continua
+
+4. Busca do livro na lista:
+   - Se escolha = 1 → pede código → busca por código
+   - Se escolha = 2 → pede título → busca por título
+   - Se livro = null → "Livro não encontrado!" → volta início do loop
+   - Se livro encontrado → continua
+
+5. Execução da função conforme opção escolhida:
+
+   CASO 1 - EMPRÉSTIMO:
+   - Chama livro.emprestimo()
+   - Se livro já emprestado → Lança LivroJaEmprestado (unchecked)
+   - Se sucesso → "Livro emprestado com sucesso!"
+
+   CASO 2 - DEVOLUÇÃO:
+   - Chama livro.devolucao()  
+   - Se livro já disponível → Lança LivroJaEstaDisponivel (checked)
+   - Se sucesso → "Livro devolvido com sucesso!"
+
+   CASO 3 - TRANSFERÊNCIA:
+   - Pede nome do novo usuário
+   - Chama livro.transferencia(novoUsuario)
+   - Se livro não emprestado → Lança LivroNaoEstaEmprestadoException
+   - Se nome vazio → Lança IllegalArgumentException
+   - Se sucesso → "Transferência realizada com sucesso!"
+
+   CASO 4 - CONSULTA:
+   - Chama livro.consultaDeStatus()
+   - Mostra status atual do livro
+
+   CASO 5 - HISTÓRICO:
+   - Mostra todos os erros registrados no ArrayList historicoErros
+   - Se vazio → "Nenhum erro registrado."
+
+6. Tratamento de exceções:
+   - InputMismatchException → "Erro: Tipo de entrada inválido!"
+   - IllegalArgumentException → "Erro: [mensagem]" + adiciona ao histórico
+   - LivroJaEmprestado → "Erro: Livro já emprestado!" + histórico
+   - LivroJaEstaDisponivel → "Erro: Livro já disponível!" + histórico  
+   - LivroNaoEstaEmprestadoException → "Erro na transferência!" + histórico
+   - Exception genérica → "Erro inesperado!" + histórico
+
+7. Fluxo contínuo:
+   - Loop while (opcao != 6) mantém sistema rodando
+   - A cada erro, limpa buffer do scanner
+   - Sempre volta ao menu após operação/erro
+   - Opção 6 encerra o sistema
