@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 public class JogoDaVelha {
     public static void main(String[] args) {
+        // Criando a janela e configurando
         JFrame janela = new JFrame("Jogo da velha");
         janela.setSize(800, 300);
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -20,7 +21,6 @@ public class JogoDaVelha {
         JButton botao1 = new JButton("Humano x Humano");
         JButton botao2 = new JButton("Humano x Computador");
         JButton botao3 = new JButton("Computador x Computador");
-        
         menu.add(botao1);
         menu.add(botao2);
         menu.add(botao3);

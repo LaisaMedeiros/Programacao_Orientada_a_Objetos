@@ -14,7 +14,7 @@ public class Principal {
         while (true) {
             try {
                 System.out.println("Insira o titulo do livro:");
-                String titulo = scanner.newString();
+                String titulo = scanner.nextLine();
 
                 if (titulo.isEmpty()) {
                     throw new IllegalArgumentException("Titulo naõ pode ser vazio");
@@ -31,7 +31,7 @@ public class Principal {
         while (true) {
             try {
                 System.out.println("Insira o codigo do livro:");
-                int codigo = scanner.newInt();
+                int codigo = scanner.nextInt();
 
                 if (codigo < 0) {
                     throw new IllegalArgumentException("Codigo naõ pode ser vazio");

@@ -9,6 +9,7 @@ public class Exemplo3 {
         JFrame janela = new JFrame("Exemplo GridLayout");
         janela.setSize(300, 200);
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // Aqui define o layout da janela como grid layout
         // 3 linhas, 2 colunas, espaçamento horizontal e vertical de 5 pixels
         janela.setLayout(new GridLayout(3, 2, 5, 5));
 

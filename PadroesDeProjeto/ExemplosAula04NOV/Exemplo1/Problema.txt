@@ -1,0 +1,2 @@
+Problema: Criacional Singleton
+Cadastrar produtos de vários fabricantes e atribuir um número único para cada produto

@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.*;
 
 // Lida com o que acontece quando o jogador clica em umd os botões do tabuleiro

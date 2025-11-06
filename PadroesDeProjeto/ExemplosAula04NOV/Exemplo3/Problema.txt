@@ -1,0 +1,3 @@
+Comportamenal: Observer
+
+Problema: Alguma informação muda e alguns objetos precisam ser notificados de mudança

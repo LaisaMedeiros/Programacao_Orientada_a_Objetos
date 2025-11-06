@@ -1,0 +1,8 @@
+Cenário: Em uma aplicação, todos os eventos (erros, alertas, informações)
+devem ser registrados em um único arquivo de log.
+
+Por que Singleton? 
+Se você tivesse várias instâncias de Logger, elas poderiam tentar escrever
+ no arquivo de log simultaneamente e de forma desordenada, causando 
+ problemas de concorrência ou corrompendo o arquivo. O Singleton garante 
+ um ponto de controle único para todas as operações de log.

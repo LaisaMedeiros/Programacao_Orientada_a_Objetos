@@ -1,0 +1,6 @@
+Problema: Estrutural Decorator
+Considerar uma loja de café com os eguintes tipos de café: forte, fraco, queimado e da casa.  -> x = 4
+Adicionais: leite, açucar, adoçante e canela. -> y = 4
+
+Sugestão: criar um classe para cada produto que pode ser vendido. 
+Quantidade de classes: x * (2 ** y)
