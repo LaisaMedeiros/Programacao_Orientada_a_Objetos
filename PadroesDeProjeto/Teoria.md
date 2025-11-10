@@ -1,3 +1,24 @@
+## Singleton
+- Objetivo: garantir que uma classe possua apenas uma instância e fornecer um ponto global de acesso a ela.
+
+#### Características
+| Característica          | Descrição                                                            |
+| ----------------------- | -------------------------------------------------------------------- |
+| **Instância única**     | Garante que apenas um objeto da classe exista.                       |
+| **Construtor privado**  | Impede que outros objetos criem instâncias diretamente.              |
+| **Acesso controlado**   | Oferece um método público que retorna a instância única.             |
+| **Criação sob demanda** | A instância é criada apenas quando necessária (lazy initialization). |
+
+### Lazy Singleton
+- A criação do objeto é adiada até o primeiro uso. Isso economiza recursos quando a classe pode nunca ser usada durante a execução do programa.
+- **Vantagens:** economiza memória;
+
+### Eager: 
+- A instância é criada no momento em que a classe é carregada na memória, mesmo que nunca seja usada.
+- **Desvantagem:** Pode desperdiçar memória se a instância nunca for usada.
+
+
+
 ## Estrutural
 
 ### Decorator
