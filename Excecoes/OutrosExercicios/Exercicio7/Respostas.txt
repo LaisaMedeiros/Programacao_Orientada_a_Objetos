@@ -1,0 +1,12 @@
+Questão 8 da lista 9
+
+c) O código não roda normalmente, pois lança uma runtime excpetione o programa para abruptamente.
+Exception in thread "main" java.lang.RuntimeException:
+
+d) O código compila e roda normalmente, pois a exceção é capturada pelo bloco try-catch.
+
+e) Ele não comppila pq exception é uma exceção checked e precisa da assinatura no metodo
+para que seja trataada no chamadar ou precisar de um bloco try catch dentro do metodo que tem
+o throw new Exception().
+
+f) 

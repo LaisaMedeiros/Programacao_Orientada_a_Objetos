@@ -1,0 +1,12 @@
+Considere um sistema de controle de recursos de um hospital, que precisa garantir o uso controlado e único de certos serviços.
+Apresente o código essencial que satisfaça as seguintes restrições, utilizando o padrão de projeto Singleton.
+
+O hospital possui recursos limitados, e cada tipo de serviço (exames, sala de cirurgia e ambulância) deve ter apenas uma instância de controle no sistema.
+
+O controle de cada serviço deve registrar quando ele está sendo usado e quando está liberado, imprimindo mensagens no console.
+
+Não deve ser possível criar novas instâncias desses serviços fora da classe, e todas as partes do programa devem acessar a mesma instância de cada serviço.
+
+O método getInstancia() deve garantir criação sob demanda (lazy initialization) e segurança em ambiente multithread (double-checked locking).
+
+Demonstre o uso em um método main, simulando dois setores do hospital que acessam o mesmo controle de ambulância e mostram que é a mesma instância sendo utilizada.

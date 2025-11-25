@@ -1,0 +1,10 @@
+Veiculos.java                    // Interface Veiculo
+Carro.java, Moto.java, Caminhao.java  // Implementações concretas
+CriadorDeVeiculos.java           // Classe abstrata com Factory Method  
+CriarCarro.java, CriarMoto.java, CriarCaminhao.java  // Fábricas concretas
+
+Na main:
+1. Cria uma fabrica de carros;
+2. Usa o objeto da fabrica de carros criado para chamar o metodo criarCarro que retorna uma instancia de Carro;
+3. Ao chamar o metodo entregarVeiculo() cria um novo Carro pq a fabrica é
+um CriarCarro e depois executa os metodos do Carro

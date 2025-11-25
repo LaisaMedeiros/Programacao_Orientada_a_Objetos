@@ -1,0 +1,43 @@
+Exercicio 7 da lista 9
+a) Saída do programa inicial:
+
+inicio da main
+    inicio do metodo1
+        inicio do metodo2
+            inicio do metodo3
+            fim do metodo3
+        fim do metodo2
+    fim do metodo1
+fim da main
+
+b) Apresente a saída do programa quando o comando no metodo3 for:
+ lista[0] = lista[4];
+
+inicio da main
+        inicio do metodo1
+                inicio do metodo2
+                        inicio do metodo3
+        Exceção "índice fora do limite" capturada
+fim da main
+
+c) Apresente a saída do programa quando os comandos do metodo3 forem: String s = null; char c = s.charAt(0)
+
+inicio da main
+        inicio do metodo1
+                inicio do metodo2
+                        inicio do metodo3
+                Exceção ponteiro nulo capturada
+        fim do metodo1
+fim da main
+
+d)  Apresente a saída do programa quando o comando no metodo3 for:
+ int div = 2/0;
+
+inicio da main
+    inicio do metodo1
+        inicio do metodo2
+            inicio do metodo3
+            Exceção erro aritmético capturada
+        fim do metodo2
+    fim do metodo1
+fim da main

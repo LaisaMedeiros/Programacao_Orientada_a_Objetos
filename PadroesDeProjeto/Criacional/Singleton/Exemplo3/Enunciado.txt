@@ -1,0 +1,9 @@
+Um sistema de configuração global deve garantir que todas as partes da aplicação acessem as 
+mesmas preferências, como idioma e tema.
+
+Implemente a classe Configuracao seguindo o padrão Singleton (lazy initialization), de forma que:
+- a instância seja criada apenas quando solicitada pela primeira vez;
+- possua atributos privados String idioma e String tema, ambos com valores padrão "Português" e "Claro";
+- inclua métodos públicos get e set para esses atributos;
+- seja impossível criar uma nova instância fora da classe;
+- demonstre, por meio de uma função main, que a alteração feita por uma instância afeta todas as outras referências.

@@ -1,4 +1,4 @@
-package Padroes de Projeto.ExemplosAula04NOV.Exemplo2;
+package PadroesDeProjeto.ExemplosAula04NOV.Exemplo2;
 
 public class Acucar extends Adicional {
     public Acucar (Bebida beb){
