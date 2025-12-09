@@ -22,7 +22,7 @@ public abstract class Carro {
     }
 
     public void setTamTanque(int novoTamTanque) {
-        if (novoTamTanque < volume/2){
+        if (novoTamTanque < this.volume/2){
             this.tamTanque = novoTamTanque;
         }
     }

@@ -1,0 +1,16 @@
+Interface:
+- Um contrato que define O QUE uma classe deve fazer, sem dizer COMO;
+- Não tem construtores
+- Métodos podem ser: private, abstract (não precisa escrever isso), static e default;
+- Não pode ser instanciada;
+- Atributo somente public static final;
+- Uma classe pode implementar várias interfaces (Herança Múltipla);
+- Os métodos só tem assinatira não tem implementação;
+
+Classe abstrata:
+- Uma classe incompleta que pode ter implementação parcial.
+- Pode ter métodos abstratos E concretos
+- Tem construtor;
+- Herança simples (só estende uma classe);
+- Não pode ser instanciada diretamente;
+- Atributos normais;

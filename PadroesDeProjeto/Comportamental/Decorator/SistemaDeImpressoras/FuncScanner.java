@@ -14,4 +14,4 @@ public class FuncScanner extends ImpressoraDecorator {
             System.out.println("Escaneando documento: " + documento);
         }
     }
-}
+} 

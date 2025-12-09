@@ -1,0 +1,34 @@
+Checked:
+- Exceções que o compilador OBRIGA você a tratar ou declarar.
+- Herdam de Exception
+- Deve ser tratado no método ou lançado para que o método chamador trate via try-catch;
+- Representam erros que acontecem, situações normais que podem acontecer;
+- Representam condições recuperáveis
+- Se for lançado para o método chamado usa throws na assinatura;
+- Exemplos: 
+    - IOException - erro de leitura/escrita de arquivo
+    - SQLException - erro de banco de dados
+    - ClassNotFoundException - classe não encontrada
+    - FileNotFoundException
+
+Unchecked:
+- Exceções que NÃO são verificadas pelo compilador.
+- Herdam de RuntimeException
+- Representam erros de programação (bugs)
+- Normalmente não devem ser tratadas, mas prevenidas
+- Quando usar: Para erros de programação que indicam bugs no código.
+- Exemplos:
+    - NullPointerException - acessar objeto nulo
+    - ArrayIndexOutOfBoundsException - índice inválido
+    - ArithmeticException - divisão por zero
+    - IllegalArgumentException - argumento inválido
+
+String s = null;
+
+Throw:
+- Lança execção
+
+Throws:
+- Palavra-chave para DECLARAR que um método pode lançar exceções.
+- Só é usado se a exceção lançada for chcked e for tratada ou direcionada para 
+que o método chamador a trate; 

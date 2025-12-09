@@ -1,0 +1,16 @@
+Interface Traje:
+    - getDescricao;
+    - getPreco;
+Classe Terno que implementa Traje:
+    - imprimirItens: retorna o nome do traje
+    - valorDoTraje: retorna o valor do traje 
+Classe abstrata TrajeDecorador que implementa Traje:
+    - atributo protegido Traje 
+    - construtor que recebe traje
+    - sobrescreve os metodos de Traje
+Classe Gravata que extende TrajeDecorador
+    - atributo ativo
+    - construto que recebe ativo e o tipo de Traje
+
+O método que imprime os itens deve chamar recursivamente 
+o mesmo método no objeto que ele contém (o objeto composto) até chegar ao traje base.

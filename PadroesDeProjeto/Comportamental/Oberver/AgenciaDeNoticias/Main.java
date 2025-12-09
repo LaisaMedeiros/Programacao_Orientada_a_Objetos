@@ -18,3 +18,11 @@ public class Main {
 
     }
 }
+
+// No Padrão Observer, a AgenciaDeNoticia (o Subject) não pode saber quais 
+// tipos de objetos específicos estão interessados em suas notícias. Ela 
+// não deve se importar se é um Jornal, uma TV, um Radio, ou um Celular.
+
+// Ao declarar os observadores como Observer (a interface), você garante
+//  que a AgenciaDeNoticia interage com eles apenas através dos métodos 
+// definidos nessa interface (provavelmente o método atualizar() ou similar).

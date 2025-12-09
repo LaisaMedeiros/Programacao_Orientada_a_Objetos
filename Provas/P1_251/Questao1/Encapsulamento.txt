@@ -1,0 +1,10 @@
+Encapsulamento é esconder os detalhes internos de uma classe e expor apenas 
+uma interface pública para interação. A ideia é proteger o estado interno 
+do objeto controlando como ele pode ser acessado e modificado.
+Principios do encapsulamento:
+- Ocultação de informação: Esconder como algo é feito
+- Interface pública: Definir como interagir com o objeto
+- Proteção de estado: Evitar que o objeto entre em estado inválido
+
+Exemplos: 
+

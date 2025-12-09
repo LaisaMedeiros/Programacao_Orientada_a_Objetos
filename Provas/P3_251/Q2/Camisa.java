@@ -1,4 +1,4 @@
-package ProvasAntigas.P3_2025.Q2;
+package Provas.P3_251.Q2;
 
 public class Camisa extends Produto{
     public Camisa (float preco, String nome){

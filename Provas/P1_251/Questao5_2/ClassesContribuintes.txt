@@ -1,0 +1,3 @@
+public class PessoaFisica implements Contribuinte { ... }
+public class Fabrica implements Contribuinte { ... }
+public class LojaComercial implements Contribuinte { ... }

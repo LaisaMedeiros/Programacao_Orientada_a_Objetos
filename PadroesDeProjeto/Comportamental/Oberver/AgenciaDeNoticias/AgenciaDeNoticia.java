@@ -2,7 +2,7 @@ package PadroesDeProjeto.Comportamental.Oberver.AgenciaDeNoticias;
 
 import java.util.List;
 import java.util.ArrayList;
-
+// classe observada
 public class AgenciaDeNoticia implements Subject{
     private List<Observer> observers = new ArrayList<>();
     

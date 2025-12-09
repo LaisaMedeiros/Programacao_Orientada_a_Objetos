@@ -1,0 +1,8 @@
+- Haverá  uma superclasse chamada Classe que é mçae das classes A, B e C;
+- Haverá um Arraylist do tipo T na ClasseD;
+- O método de inserir deve usar add(0, objeto);
+- Haverá um metodo para remover e um para imprimir os elementos na ordem;
+- Esses métodos deverão estar na mesma classe;
+- Criar uma interface com os metodos nçao implementados;
+- Cria uma classe generica que extenda Classe e implemente a interface;
+- Cada classe A, B e C deve ter um identificador para remoção;
